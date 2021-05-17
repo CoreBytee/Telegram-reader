@@ -49,4 +49,11 @@ local function ReadFile(TeleData)
 
 end
 
-ReadFile(Data)
+local Dat = ReadFile(Data)
+
+for i, v in pairs(Dat) do
+    print("Key", i)
+    for u, b in pairs(v) do
+        print(u, b)
+    end
+end
