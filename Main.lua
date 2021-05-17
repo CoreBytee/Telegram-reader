@@ -27,7 +27,7 @@ local function ReadFile(TeleData)
 
             for u, b in pairs(ParsedString) do
                 print(u, b)
-                ParsedString[u] = Split(Split(b, ")")[1], "*")[1]
+                ParsedString[u] = tonumber(Split(Split(b, ")")[1], "*")[1])
             end
 
             ToReturn[Key] = ParsedString
@@ -45,12 +45,7 @@ local function ReadFile(TeleData)
     local ParsedDataTable = Parse(DataTable)
     local KeyParsed = ParseData(ParsedDataTable)
 
-    for i, v in pairs(KeyParsed) do
-        print("Key", i)
-        for u, b in pairs(v) do
-            print(u, tonumber(b))
-        end
-    end
+    
 
     return KeyParsed
 
