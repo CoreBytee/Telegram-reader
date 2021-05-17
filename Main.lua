@@ -26,12 +26,10 @@ local function ReadFile(TeleData)
             table.remove(ParsedString, 1)
 
             for u, b in pairs(ParsedString) do
-                print(u, b)
                 ParsedString[u] = tonumber(Split(Split(b, ")")[1], "*")[1])
             end
 
             ToReturn[Key] = ParsedString
-
         end
         return ToReturn
     end
